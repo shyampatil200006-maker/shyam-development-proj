@@ -1,28 +1,31 @@
 #!/usr/bin/env python3
 """
 Main application file for shyam-development-proj
-A simple Python project demonstrating basic functionality.
+A Flask web application demonstrating basic functionality.
 """
 
-def main():
-    """Main function to run the application."""
-    print("Welcome to Shyam Development Project!")
-    print("This is a Python development project.")
-    
-    # Basic functionality demonstration
-    name = input("Enter your name: ")
-    print(f"Hello, {name}! Thanks for trying this project.")
-    
-    # Simple calculation example
-    try:
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-        result = num1 + num2
-        print(f"The sum of {num1} and {num2} is: {result}")
-    except ValueError:
-        print("Please enter valid numbers.")
-    
-    print("Project is running successfully!")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    """Home page route."""
+    return '''
+    <h1>Welcome to Shyam Development Project!</h1>
+    <p>This is a Flask web application running in Replit.</p>
+    <p>The project is working successfully!</p>
+    '''
+
+@app.route('/about')
+def about():
+    """About page route."""
+    return '''
+    <h1>About</h1>
+    <p>This is a Python Flask development project.</p>
+    <p>Built and running in the Replit environment.</p>
+    '''
 
 if __name__ == "__main__":
-    main()
+    app.run(host="0.0.0.0", port=5000, debug=True)
+

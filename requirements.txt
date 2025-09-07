@@ -1,3 +1,2 @@
 # Python dependencies for shyam-development-proj
-# Currently using only standard library modules
-# Add additional packages as needed
+flask>=3.1.0

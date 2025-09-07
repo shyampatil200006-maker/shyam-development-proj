@@ -1,41 +1,46 @@
 # Shyam Development Project
 
 ## Overview
-A Python development project set up to run in the Replit environment. This is a basic interactive console application that demonstrates fundamental Python functionality.
+A Python Flask web application set up to run in the Replit environment. This is a basic web server that demonstrates Flask functionality and web development.
 
 ## Project Architecture
 - **Language**: Python 3.12
-- **Main File**: `main.py` - Interactive console application
-- **Dependencies**: Standard library only (see `requirements.txt`)
-- **Project Type**: Console application
+- **Framework**: Flask 3.1.0
+- **Main File**: `main.py` - Flask web application
+- **Dependencies**: Flask (see `requirements.txt`)
+- **Project Type**: Web application
+- **Port**: 5000
 
 ## Recent Changes
-- **2025-09-07**: Initial project setup in Replit environment
+- **2025-09-07**: Initial project setup and Flask conversion
   - Installed Python 3.12 module
-  - Created basic interactive console application
-  - Set up Replit workflow for Python execution
-  - Configured project structure with main.py and requirements.txt
+  - Added Flask framework dependency
+  - Created Flask web application with basic routes
+  - Configured web server workflow on port 5000
+  - Set up proper host configuration (0.0.0.0) for Replit environment
 
 ## User Preferences
-- Python-based development
-- Interactive console applications
+- Python-based web development
+- Flask framework
 - Clean, simple project structure
+- Web-based applications
 
 ## Features
-- Interactive user input handling
-- Basic arithmetic operations
-- Error handling for invalid inputs
-- Welcome message and user interaction
+- Flask web server running on port 5000
+- Home page route (/) with welcome message
+- About page route (/about) with project information
+- Debug mode enabled for development
+- Proper host configuration for Replit proxy
 
 ## Running the Project
-The project is configured with a Replit workflow that automatically runs `python main.py`. The application will:
-1. Display a welcome message
-2. Ask for user name input
-3. Perform a simple calculation with two numbers
-4. Handle basic error cases
+The project is configured with a Replit workflow that runs the Flask web server:
+- Automatically starts `python main.py`
+- Serves on `0.0.0.0:5000`
+- Debug mode enabled for development
+- Access via Replit's web preview
 
 ## Development Notes
-- Uses Python 3.12 with standard library
-- Console-based interaction
-- Ready for extension with additional features
-- Follows Python best practices with proper error handling
+- Uses Python 3.12 with Flask web framework
+- Configured for Replit's proxy environment
+- Ready for extension with additional routes and features
+- Follows Flask best practices with proper app structure
