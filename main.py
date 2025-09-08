@@ -4,7 +4,7 @@ Main application file for shyam-development-proj
 A Flask web application demonstrating basic functionality.
 """
 
-from flask import Flask
+from flask import Flask, render_template
 
 flaskapp = Flask(__name__)
 
@@ -12,18 +12,13 @@ flaskapp = Flask(__name__)
 @flaskapp.route('/')
 def home():
   """Home page route."""
-  return '''
-    <h1>Welcome to Shyam Development Project, Flask Web App!</h1>'''
+  return render_template('home.html')
 
 
 @flaskapp.route('/about')
 def about():
   """About page route."""
-  return '''
-    <h1>About</h1>
-    <p>This is a Python Flask development project.</p>
-    <p>Built and running in the Replit environment.</p>
-    '''
+  return render_template('home.html')
 
 
 if __name__ == "__main__":
