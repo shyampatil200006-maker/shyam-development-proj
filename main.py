@@ -6,26 +6,25 @@ A Flask web application demonstrating basic functionality.
 
 from flask import Flask
 
-app = Flask(__name__)
+flaskapp = Flask(__name__)
 
-@app.route('/')
+
+@flaskapp.route('/')
 def home():
-    """Home page route."""
-    return '''
-    <h1>Welcome to Shyam Development Project!</h1>
-    <p>This is a Flask web application running in Replit.</p>
-    <p>The project is working successfully!</p>
-    '''
+  """Home page route."""
+  return '''
+    <h1>Welcome to Shyam Development Project, Flask Web App!</h1>'''
 
-@app.route('/about')
+
+@flaskapp.route('/about')
 def about():
-    """About page route."""
-    return '''
+  """About page route."""
+  return '''
     <h1>About</h1>
     <p>This is a Python Flask development project.</p>
     <p>Built and running in the Replit environment.</p>
     '''
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
 
+if __name__ == "__main__":
+  flaskapp.run(host="0.0.0.0", port=5000, debug=True)
