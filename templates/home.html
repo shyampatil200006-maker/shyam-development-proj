@@ -19,19 +19,15 @@
     <img id = "banner" class = "img-fluid" src="https://cf005087-45b8-4b3b-a394-f1569f23f128-00-1z94h9pgn8jec.pike.replit.dev/static/personal_banking.jpg"  </img>
     <h2 class = "text-center" mt-2 mb-4>About {{bnktype}} banking</h2>
     <p class = "lead">{{bnktype}} banking is a banking service that is tailored to the needs of individual customers. It is designed to provide personalized financial solutions and services to meet the unique requirements of each customer. Personal banking services can include a wide range of financial products and services</p>
-    <h2>Open Positions</h2>
-    <div>
-     {%for jobs in availjobs%}
-      <div style="margin-bottom:16" >
-        <h4 style = "color:rgb(120,120,120);margin-bottom:4px">{{jobs['title']}}</h4>
-        <div><b>Location: </b>{{jobs['location']}}</div>
-        <div><b>Salary: </b>{{jobs['salary']}}</div>
-      </div>
-     {%endfor%}
-    </div>
-    <div class ="text-center"> 
-      <button type="button" class="btn btn-primary btn-lg">contact us</button>
-      <p class = mt-4 mb-4>Copyright,Shyam patil 2025</p>
+      <h2>Open Positions</h2>
+       <div>
+          
+           {% include 'jobitem.html'%}
+          
+       </div>
+      <div class = "text-center" mt-2 mb-4> 
+        <button type="button" class="btn btn-primary btn-lg">contact us</button>
+        <p class = mt-4 mb-4>Copyright,Shyam patil 2025</p>
       </div>
   </body>
 </html>

@@ -4,7 +4,7 @@ Main application file for shyam-development-proj
 A Flask web application demonstrating basic functionality.
 """
 
-from flask import Flask, render_template
+from flask import Flask, render_template, josnify
 
 flaskapp = Flask(__name__)
 
@@ -31,6 +31,9 @@ def home():
   """Home page route. with multiple parameters for job list , banking type"""
   return render_template('home.html', availjobs=JOBS, bnktype="Private")
 
-
+@flaskapp.route('/api/jobs')
+def list_jobs()
+  return jsonify(JOBS)
+    """API route to list all jobs"""
 if __name__ == "__main__":
   flaskapp.run(host="0.0.0.0", port=5000, debug=True)
